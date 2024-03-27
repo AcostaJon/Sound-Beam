@@ -1,0 +1,154 @@
+/* keyframes */
+/* wobble */
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+/* blink */
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+ 
+}
+
+/* navigation section */
+.navbar-brand:hover{
+  -webkit-animation: blink-1 0.6s both;
+	        animation: blink-1 0.6s both;
+}
+.medialinks a:hover, #loginButton:hover{
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+}
+
+/* jumbo section */
+.jumbo h1 {
+  font-size: 38px;
+}
+
+/* subscribe section */
+.subscribe {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.subscribe button:hover, #oderNowMobileButton:hover{
+  background-color: white;
+  border: white;
+  color: rgb(0, 0, 0);
+}
+
+/* offcanvas menu */
+#offcanvasNavbar-expand-lg{
+  background-color: rgb(32, 32, 32);
+}
+
+.offcanvas-header .btn-close[type='button']{
+  margin-left: 0;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* large devices */
+@media screen and (min-width: 992px) {
+
+  /* jumbo */
+  .jumbo {
+    margin-left: 20%;
+  }
+
+  .jumbo h1 {
+    font-size: 55px;
+  }
+
+  .subscribe input[type='email'] {
+    height: 25px;
+  }
+}
